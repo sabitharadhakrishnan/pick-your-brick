@@ -8,6 +8,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 @RequestMapping("products")
 @CrossOrigin(origins= {"http://localhost:3000"})
@@ -26,4 +29,16 @@ public class ProductController {
         BeanUtils.copyProperties(createdProduct, returnValue);
         return returnValue;
     }
+    @GetMapping
+    public List<ProductDetailsResponseModel> getProductList(){
+        List<ProductDetailsResponseModel> returnValue = new ArrayList();
+        List<ProductDTO> productDTOList = productService.getProductList();
+        for(ProductDTO productDTO: productDTOList){
+            ProductDetailsResponseModel productDetailsResponseModel = new ProductDetailsResponseModel();
+            BeanUtils.copyProperties(productDTO, productDetailsResponseModel);
+            returnValue.add(productDetailsResponseModel);
+        }
+        return returnValue;
+    }
+
 }

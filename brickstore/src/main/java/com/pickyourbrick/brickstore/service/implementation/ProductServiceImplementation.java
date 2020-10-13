@@ -8,6 +8,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ProductServiceImplementation implements ProductService {
 
@@ -23,6 +26,19 @@ public class ProductServiceImplementation implements ProductService {
         ProductEntity storedProduct = productRepository.save(productEntity);
         ProductDTO returnValue = new ProductDTO();
         BeanUtils.copyProperties(storedProduct, returnValue);
+        return returnValue;
+    }
+
+    @Override
+    public List<ProductDTO> getProductList() {
+        List<ProductDTO> returnValue = new ArrayList<ProductDTO>();
+        List<ProductEntity> productEntityList = (List<ProductEntity>) productRepository.findAll();
+        for(ProductEntity productEntity: productEntityList){
+            ProductDTO productDTO = new ProductDTO();
+            BeanUtils.copyProperties(productEntity, productDTO);
+            returnValue.add(productDTO);
+        }
+        System.out.println(returnValue);
         return returnValue;
     }
 }
