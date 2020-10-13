@@ -1,5 +1,21 @@
 .App {
   text-align: center;
+  background-color: peachpuff;
 }
 
+#list{
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.products {
+  text-align: left;
+   font-size: 1em;
+   color: blue;
+   width: 300px;
+  border: 2px solid palevioletred;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 3%;
+  }
 

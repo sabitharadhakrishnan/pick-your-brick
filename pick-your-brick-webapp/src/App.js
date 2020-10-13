@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import './App.css';
+import ProductsView from "./components/ProductsView"
 
 function App() {
   return (
