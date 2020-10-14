@@ -19,7 +19,7 @@ export default function ProductsView(){
 
     return(
         <React.Fragment>
-            <div id = "list" >Product Catelog</div>
+            <div id = "list" >Product Catalog</div>
             {products.map((product)=>{
                 return(
                 <div key={product.productId} className = "products">
