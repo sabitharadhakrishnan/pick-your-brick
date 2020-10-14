@@ -1,9 +1,9 @@
-package com.brickstore.data;
+package com.brickstore;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Productsview implements ProductsViewCalibratable{
+public class Productsview implements ProductsViewCalibratable {
     private static final String URL = "localhost:3000";
 
     private Productsview() {

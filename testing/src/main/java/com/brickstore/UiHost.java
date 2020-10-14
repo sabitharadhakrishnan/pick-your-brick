@@ -1,4 +1,4 @@
-package com.brickstore.data;
+package com.brickstore;
 
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;

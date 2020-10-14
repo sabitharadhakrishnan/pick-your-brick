@@ -1,4 +1,4 @@
-package com.brickstore.data;
+package com.brickstore;
 
 public interface ProductsViewCalibratable {
     String getHeading();

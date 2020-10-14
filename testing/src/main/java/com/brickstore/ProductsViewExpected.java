@@ -1,4 +1,4 @@
-package com.brickstore.data;
+package com.brickstore;
 
 public class ProductsViewExpected implements ProductsViewCalibratable {
 
