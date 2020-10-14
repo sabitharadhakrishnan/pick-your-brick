@@ -6,8 +6,7 @@ public class ProductsViewExpected implements ProductsViewCalibratable {
     }
 
     public static ProductsViewExpected getInstance() {
-        ProductsViewExpected productsViewExpected = new ProductsViewExpected();
-        return productsViewExpected;
+        return new ProductsViewExpected();
     }
 
     @Override
